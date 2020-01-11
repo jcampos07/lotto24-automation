@@ -6,6 +6,7 @@ screenshots
 output/
 debug.log
 ../.idea/
+logs/*
 
 # exclude everything
 reports/*

@@ -1,0 +1,1 @@
+# lotto24-automation

@@ -6,7 +6,6 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -66,11 +65,7 @@ public class TestListener implements ITestListener {
                 System.out.println("File created " + file);
                 file.mkdir();
             }
-            //Get driver from BaseTest and assign to local web driver variable.
-            Object testClass = iTestResult.getInstance();
-            WebDriver webDriver = ((TestCaseBase) testClass).getDriver();
-
-            File scrFile = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.FILE);
+            File scrFile = ((TakesScreenshot) TestCaseBase.driver).getScreenshotAs(OutputType.FILE);
             StringBuilder testFailed = new StringBuilder();
             testFailed.append(this.getClass().getSimpleName()).append(".").append(iTestResult.getName()).
                     append(".failedTest").append(".png");

@@ -12,10 +12,11 @@ import tests.config.TestCaseBase;
 public class PageObjectBase {
 
     protected final ActionBot actionBot;
+    protected final WebDriver driver;
 
     protected PageObjectBase(){
         TestCaseBase testCaseBase = new TestCaseBase();
-        WebDriver driver = testCaseBase.getDriver();
+        driver = testCaseBase.getDriver();
         actionBot = new ActionBot(driver);
     }
 }

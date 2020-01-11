@@ -1,10 +1,17 @@
 package main.java.utilities;
 
+import main.java.datastructures.ModelElement;
 import main.java.datastructures.SearchElement;
+
+/**
+ * Contains the files paths and data structures classes each json file is going to be mapped.
+ * @author Jason Campos on 1/11/2020
+ */
 
 public enum DocumentsPaths {
 
-    SEARCH("src/main/resources/datasources/SearchElements.json", SearchElement.class);
+    SEARCH("src/main/resources/datasources/SearchElements.json", SearchElement.class),
+    MODELS("src/main/resources/datasources/ModelElements.json", ModelElement.class);
 
     private String fileName;
     private Class domainType;

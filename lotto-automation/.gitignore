@@ -6,7 +6,7 @@ screenshots
 output/
 debug.log
 ../.idea/
-logs/*
+logs/lotto24-automation.log
 
 # exclude everything
 reports/*

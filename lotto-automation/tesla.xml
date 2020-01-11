@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Lotto24">
+
+    <listeners>
+        <listener class-name="tests.config.TestListener"/>
+    </listeners>
+
+    <test name="Lotto">
+        <parameter name="browserName" value="${browser}"/>
+        <parameter name="mode" value="${mode}"/>
+<!--        <parameter name="browserName" value="Chrome"/>-->
+<!--        <parameter name="mode" value="local"/>-->
+        <parameter name="url" value="https://www.tesla.com"/>
+
+        <groups>
+            <run>
+                <include name="tesla"/>
+            </run>
+        </groups>
+            <classes>
+                <class name="tests.tesla.TeslaTest"/>
+            </classes>
+    </test>
+</suite>

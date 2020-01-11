@@ -5,35 +5,35 @@ import com.google.gson.internal.LinkedTreeMap;
 public class SearchElement {
 
     private String searchCriteria;
-    private String result;
+    private String title;
 
     public SearchElement(){
     }
 
     public SearchElement(LinkedTreeMap<String,String> map){
 
-        this.searchCriteria = map.get("searchCriteria");
-        this.result = map.get("result");
+        setSearchCriteria(map.get("searchCriteria"));
+        setTitle(map.get("title"));
     }
 
-    public SearchElement(String searchCriteria, String result) {
-        this.searchCriteria = searchCriteria;
-        this.result = result;
+    public SearchElement(String searchCriteria, String title) {
+        setSearchCriteria(searchCriteria);
+        setTitle(title);
     }
 
-    public String getResult() {
-        return result;
+    public String getTitle() {
+        return title;
     }
 
     public String getSearchCriteria() {
         return searchCriteria;
     }
 
-    public void setResult(String result) {
-        this.result = result;
+    private void setTitle(String title) {
+        this.title = title;
     }
 
-    public void setSearchCriteria(String searchCriteria) {
+    private void setSearchCriteria(String searchCriteria) {
         this.searchCriteria = searchCriteria;
     }
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Lotto24" parallel="tests" thread-count="1">
+
+    <listeners>
+        <listener class-name="tests.config.TestListener"/>
+    </listeners>
+
+    <test name="Lotto">
+        <parameter name="browserName" value="Chrome"/>
+        <parameter name="url" value="https://wikipedia.org"/>
+        <groups>
+            <run>
+                <include name="tests"/>
+            </run>
+        </groups>
+            <classes>
+                <class name="tests.search.SearchTests"/>
+            </classes>
+    </test>
+</suite>

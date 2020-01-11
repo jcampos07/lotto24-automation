@@ -1,0 +1,11 @@
+.idea/
+target/
+lotto-automation.iml
+lotto.iml
+screenshots
+output/
+debug.log
+../.idea/
+
+# exclude everything
+reports/*

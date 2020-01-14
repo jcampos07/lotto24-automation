@@ -36,7 +36,7 @@ public class ArticlePage extends PageObjectBase {
     }
 
     /**
-     * Get the elements text for either the table of contents or the sections titles, we use a lambda expresion
+     * Get the elements text for either the table of contents or the sections titles, we use a lambda expression
      * in order to get the text of the elements
      * @param section String with the Web elements to get, it could be the table of content or sections list
      * @return List<String></String> with the text of the elements

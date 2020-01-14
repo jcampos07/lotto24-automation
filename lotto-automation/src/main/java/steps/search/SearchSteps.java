@@ -46,7 +46,7 @@ public class SearchSteps {
     public void verifyTableContentsAgainstSections() {
         List<String> contentTitlesUi = articlePage.getElementsText("content table");
         List<String> sectionTitlesUi = articlePage.getElementsText("sections");
-        Assert.assertEquals(contentTitlesUi, sectionTitlesUi, "Content types and sections in the article are" +
+        Assert.assertEquals(contentTitlesUi, sectionTitlesUi, "Content ttiels and sections in the article are" +
                 " not the same ones");
     }
 }

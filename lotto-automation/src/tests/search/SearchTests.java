@@ -9,12 +9,13 @@ import tests.config.TestCase;
 
 public class SearchTests extends TestCase {
 
-    @Test(groups = {"search"}, description = "Search on wikipedia some articles", dataProvider = "Search on wikipedia",
+    @Test(groups = {"search"}, description = "TC 01:Verify wikipedia search retrieves information", dataProvider = "Search on wikipedia",
             dataProviderClass = SearchDataProvider.class)
     public void search(SearchElement searchElement) {
         SearchSteps searchSteps = new SearchSteps();
         searchSteps.executeSearch(searchElement);
         searchSteps.verifySearchResults();
         searchSteps.verifyFirstResultInformation();
+        searchSteps.verifyTableContentsAgainstSections();
     }
 }

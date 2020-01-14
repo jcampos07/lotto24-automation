@@ -7,6 +7,8 @@ import main.java.pageobjects.search.SearchPage;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
+import java.util.List;
+
 /**
  * Search steps page that works as controller between the tests and page objects
  *
@@ -17,6 +19,7 @@ public class SearchSteps {
 
     private final SoftAssert softAssert = new SoftAssert();
     private ResultsPage resultsPage;
+    private ArticlePage articlePage;
 
     public void executeSearch(SearchElement searchElement) {
         SearchPage searchPage = new SearchPage();
@@ -31,9 +34,19 @@ public class SearchSteps {
     }
 
     public void verifyFirstResultInformation() {
-        ArticlePage articlePage = resultsPage.selectFirstResult();
+        articlePage = resultsPage.selectFirstResult();
         softAssert.assertFalse(articlePage.isArticleTitleDisplayed(), "Article title was not displayed");
         softAssert.assertTrue(articlePage.isTableOfContentsDisplayed(), "Table of contents was not displayed");
         softAssert.assertAll();
+    }
+
+    /**
+     * Verify each title in the table of contents has a section in the article
+     */
+    public void verifyTableContentsAgainstSections() {
+        List<String> contentTitlesUi = articlePage.getElementsText("content table");
+        List<String> sectionTitlesUi = articlePage.getElementsText("sections");
+        Assert.assertEquals(contentTitlesUi, sectionTitlesUi, "Content types and sections in the article are" +
+                " not the same ones");
     }
 }

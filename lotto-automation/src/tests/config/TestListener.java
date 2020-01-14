@@ -32,6 +32,7 @@ public class TestListener implements ITestListener {
         Map<String, String> testNGParams = iTestContext.getCurrentXmlTest().getLocalParameters();
         ExtentManager.getInstance().setSystemInfo("Browser", testNGParams.get("browserName"));
         ExtentManager.getInstance().setSystemInfo("URL", testNGParams.get("url"));
+        ExtentManager.getInstance().setSystemInfo("Mode", testNGParams.get("mode"));
         ExtentManager.getInstance().flush();
     }
 

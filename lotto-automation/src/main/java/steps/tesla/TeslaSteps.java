@@ -13,7 +13,7 @@ import org.testng.asserts.SoftAssert;
 
 public class TeslaSteps {
 
-    private TeslaPage teslaPage = new TeslaPage();
+    private final TeslaPage teslaPage = new TeslaPage();
 
     public void makeThePageResponsive() {
         Assert.assertTrue(teslaPage.isTeslaPageDisplayed(), "Tesla page was not displayed");

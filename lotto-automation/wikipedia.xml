@@ -9,8 +9,8 @@
     <test name="Lotto">
         <parameter name="browserName" value="${browser}"/>
         <parameter name="mode" value="${mode}"/>
-        <!--<parameter name="browserName" value="Chrome"/>-->
-        <!--<parameter name="mode" value="headless"/>-->
+<!--        <parameter name="browserName" value="Chrome"/>-->
+<!--        <parameter name="mode" value="UI"/>-->
         <parameter name="url" value="https://wikipedia.org"/>
         <groups>
             <run>

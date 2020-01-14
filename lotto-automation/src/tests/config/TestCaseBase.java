@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 /**
@@ -98,6 +99,9 @@ public class TestCaseBase {
 
     private static FirefoxOptions setFirefoxOptions(String mode) {
         FirefoxOptions options = new FirefoxOptions();
+        FirefoxProfile profile = new FirefoxProfile();
+        profile.setPreference("browser.privatebrowsing.autostart", true);
+        options.setProfile(profile);
         if (mode.equalsIgnoreCase("headless")) {
             options.addArguments("--headless");
         }

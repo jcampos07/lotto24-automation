@@ -13,6 +13,7 @@ Critical
 
 
 **Steps:**
+
 	*Go to postman, enter the following url -> http://jsonplaceholder.typicode.com/posts/1 
 	*In "Headers" section enter -> "Accept -> application/json" 
 	*Select "Delete" method, click on "Send" button. 
@@ -20,10 +21,12 @@ Critical
 	*Hit on "Send" button. 
 
 **Actual Result**
+
 	*Step 3 -> 200 is retrieved as response. No json body is displayed. 
 	*Step 5 -> Post is retrieved 
 
 **Expected behavior**
+
 	*Step 3 -> Json body message should be displayed indicating the post has been deleted. 
 	*Step 5 -> Post should not be retrieved, 404 status code with a proper message should be displayed 
 
@@ -42,6 +45,7 @@ Critical
 
 
 **Steps:**
+
 	* Go to postman, enter the following url -> http://jsonplaceholder.typicode.com/posts
 	* In "Headers" section enter -> "Accept -> application/json"
 	* In the "Body" enter the following json:
@@ -58,9 +62,11 @@ Critical
 	* Hit on "Send" button. 
 
 **Actual Result**
+
 	*Step 6 -> 404 is retrieved. No error message is displayed in the json response body
 
 **Expected behavior**
+
 	*Step 6 -> Post created information should be retrieved. 
 
 
@@ -76,6 +82,7 @@ Critical
 
 
 **Steps:**
+
 	* Go to postman, enter the following url -> http://jsonplaceholder.typicode.com/posts/1 
 	* In "Headers" section enter -> "Accept -> application/json" 
 	* In the "Body" enter the following json: 
@@ -92,9 +99,11 @@ Critical
 	* Hit on "Send" button. 
 
 **Actual Result**
+
 	*Step 4 -> The id retrieved belongs to the old post id 
 	*Step 6 -> 404 is retrieved 
 
 **Expected behavior**
+
 	*Step 4 -> Post id retrieved should be the new one. 
 	*Step 6 -> Post should be retrieved with the new information 

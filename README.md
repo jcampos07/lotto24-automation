@@ -84,21 +84,21 @@ I have decided to do it in that way because I like to have the logic in another 
 
 In order to run the api project, we would need to open the console, move to the folder called: "lotto24_api", then we only need to enter the following command:
 	
-	```shell
-	behave
-	```
+```shell
+behave
+```
 That command will show the result in the console. 
 In order to see an Allure report with the results, please execute the following commands:
 
-	```shell
-	behave -f allure_behave.formatter:AllureFormatter -o results/jsonplaceholder --tags=@rest -D tag=rest
-	```
-	```shell
-	allure generate results/jsonplaceholder -o reports/jsonplaceholder --clean
-	```
-	```shell
-	allure open reports/jsonplaceholder
-	```
+```shell
+behave -f allure_behave.formatter:AllureFormatter -o results/jsonplaceholder --tags=@rest -D tag=rest
+```
+```shell
+allure generate results/jsonplaceholder -o reports/jsonplaceholder --clean
+```
+```shell
+allure open reports/jsonplaceholder
+```
 I found several bugs in the endpoints I tested, you are going to find attached a file in the repository called Bugs.md where you can see them in detail.
 
 

@@ -83,6 +83,7 @@ I have decided to do it in that way because I like to have the logic in another 
 ### Running the api project:
 
 In order to run the api project, we would need to open the console, move to the folder called: "lotto24_api", then we only need to enter the following command:
+	
 	```shell
 	behave
 	```
@@ -97,7 +98,7 @@ In order to see an Allure report with the results, please execute the following 
 	```
 	```shell
 	allure open reports/jsonplaceholder
-	 ```
+	```
 I found several bugs in the endpoints I tested, you are going to find attached a file in the repository called Bugs.md where you can see them in detail.
 
 
@@ -131,6 +132,7 @@ Related to the scenario to test for the wikipedia page, I felt that we need to i
 
 In order to run the selenium project, we need to open a console, then move to the project: lotto24-automation/lotto-automation using cd command.
 Once we are in that path, we just need to enter this command:
+
 	```shell
 	mvn test -DsuiteXmlFile=wikipedia.xml -Dbrowser=Chrome -Dmode=UI -Dtag=search
 	```
@@ -140,10 +142,12 @@ Here we can noticed, I have configure the browser to be passed as parameter, so,
 	Chome -> Chrome browser
 	
 Additionally, we can run the tests in headless mode, for this me would need to modify the mode parameter like this:
+	
 	```shell
 	mvn test -DsuiteXmlFile=wikipedia.xml -Dbrowser=Chrome -Dmode=headless -Dtag=search
 	```
 The above commands are going to execute the wikipedia test only, if you want to test the tesla page, you need to execute the following command:
+	
 	```shell
 	mvn test -DsuiteXmlFile=tesla.xml -Dbrowser=Chrome -Dmode=UI -Dtag=tesla
 	```

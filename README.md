@@ -133,9 +133,9 @@ Related to the scenario to test for the wikipedia page, I felt that we need to i
 In order to run the selenium project, we need to open a console, then move to the project: lotto24-automation/lotto-automation using cd command.
 Once we are in that path, we just need to enter this command:
 
-	```shell
-	mvn test -DsuiteXmlFile=wikipedia.xml -Dbrowser=Chrome -Dmode=UI -Dtag=search
-	```
+```shell
+mvn test -DsuiteXmlFile=wikipedia.xml -Dbrowser=Chrome -Dmode=UI -Dtag=search
+```
 Here we can noticed, I have configure the browser to be passed as parameter, so, the ones we can send are the following:
 	
 	Firefox -> Firefox browser
@@ -143,14 +143,14 @@ Here we can noticed, I have configure the browser to be passed as parameter, so,
 	
 Additionally, we can run the tests in headless mode, for this me would need to modify the mode parameter like this:
 	
-	```shell
-	mvn test -DsuiteXmlFile=wikipedia.xml -Dbrowser=Chrome -Dmode=headless -Dtag=search
-	```
+```shell
+mvn test -DsuiteXmlFile=wikipedia.xml -Dbrowser=Chrome -Dmode=headless -Dtag=search
+```
 The above commands are going to execute the wikipedia test only, if you want to test the tesla page, you need to execute the following command:
 	
-	```shell
-	mvn test -DsuiteXmlFile=tesla.xml -Dbrowser=Chrome -Dmode=UI -Dtag=tesla
-	```
+```shell
+mvn test -DsuiteXmlFile=tesla.xml -Dbrowser=Chrome -Dmode=UI -Dtag=tesla
+```
 We also can configure the browser to run in Firefox modifying the -Dbrowser=Firefox parameter in the previous step.
 
 Once the automation has finished, we could go to reports folder, there you can see the extend report with the summary of the test execution.

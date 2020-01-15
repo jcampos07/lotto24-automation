@@ -11,7 +11,8 @@ Lets start with the RestApi project.
 
 ### Framework Design for RestApi:
 This framework has been created in Python, behave, request library and Allure report. I created this framework using those technologies because python has better performance and it is faster than Java.
-In addition, I use behave (similar to cucumber) because when we test RestApi it is difficult for non technical people to understand what we are testing, using behave which is based on gherkin language, it helps us to show them what its being tested.
+In addition, It is based on BDD methodology which helps non technical people to understand what we are testing, using behave which is based on gherkin language.
+
 The structure is simple, lets explain it:
 
 - **config** (request.py class that encapsulates the functions like put, get, delete, post. These functions are going to be used for the classes under steps folder)
@@ -104,10 +105,19 @@ I found several bugs in the endpoints I tested, you are going to find attached a
 
 ### Framework Design for Front End:
 This framework has been created in Selenium, Java, Maven, TestNG, Log4J and Extend Report. I chose those tools because most of the framework for Front End testing are based on them. Also, on internet we can find help quickly when a problem comes up since the community is big.
-I created it based on Behavior Driver Development methodology (BDD), as we can see in the Search.java test, I run the search test two times using data providers, the first time with the search criteria you requested in the test, the second time, with a search I set, this shows this framework can be use for this methodology.
+I created it based on Data Driven Testing methodology (DDT), as we can see in the Search.java test, I run the search test two times using data providers, the first time with the search criteria you requested in the test, the second time, with a search I set, this shows this framework can be use for this methodology.
 Beside, I decided to create two different testNG files, this because both pages (Tesla and wikipedia) belong to a different domains, so, it is not good to have both tests in the same file, the best approach is to have them in a different xml.
+There is an important fact in this framework, we do not need to have the drivers in our computer, I am using a library that gets the drivers we need from internet, it downloads them (if they do not exist) and use them.
 
-The project structure is the following:
+Basically, the modules for this framework are:
+
+- **Assertion tool** -> TestNG with is powerfull and offers nice feature we can take advantage in Automation
+- **Data set up** -> Json files are read and the information are mapped to a java object (SearchElement.java for example) which contains the information we need to test a scenario
+- **Build management tool** -> Maven is the tool this framework uses, it allows us to handle the libraries, to build and run the automation
+- **Reporting tool** -> Extend report which has a nice view of the tests results.
+- **Logging tool** -> Log4J library allows us to enter custom messages in a file, it helps to track an issue easier
+
+Now, I would like to explain the project structure I built for this challenge:
 
 - **java/bot** (Encapsulates the selenium api functions, here we have the sendKeys, click, the explicit waits, etc. We have custom functions to improve the functionality that selenium offers)
 - **java/datastructures** (Domain classes that map the json information in a object, this object is from where we get the information for each test scenario)

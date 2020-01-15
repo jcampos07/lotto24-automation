@@ -14,11 +14,11 @@ This framework has been created in Python, behave, request library and Allure re
 In addition, I use behave (similar to cucumber) because when we test RestApi it is difficult for non technical people to understand what we are testing, using behave which is based on gherkin language, it helps us to show them what its being tested.
 The structure is simple, lets explain it:
 
-- config (request.py class that encapsulates the functions like put, get, delete, post. These functions are going to be used for the classes under steps folder)
-- data (Store json files we need in the tests, for example, we have new_post.json file that contains the information we need to the creation of a new post test)
-- feature (Use gherkin language, we have a .feature for each endpoint we are going to test, in each .feature file we have several scenarios)
-	- steps (each .feature file should have a python class where we implement the function for each step (Given, when, then), here we develop the logic to test a scenario)
-- utils	(Functions that are helpful for the project, for example write a value in a file)
+- **config** (request.py class that encapsulates the functions like put, get, delete, post. These functions are going to be used for the classes under steps folder)
+- **data** (Store json files we need in the tests, for example, we have new_post.json file that contains the information we need to the creation of a new post test)
+- **feature** (Use gherkin language, we have a .feature for each endpoint we are going to test, in each .feature file we have several scenarios)
+	- **steps** (each .feature file should have a python class where we implement the function for each step (Given, when, then), here we develop the logic to test a scenario)
+- **utils**	(Functions that are helpful for the project, for example write a value in a file)
 
 Another important point I would like to explain is that as you can see in the project, each folder under "steps" contains two python files, one of them implements the functions we need to test according to the description we give in the .feature file, the second class with name posts_functions for example has the logic we need to validate an scenario (compare json response, get specific values from a complex json file).
 I have decided to do it in that way because I like to have the logic in another file to make the code clearer, additionally, the functions in posts_functions can be reused for other scenarios that belong to the same feature.
@@ -65,7 +65,7 @@ I have decided to do it in that way because I like to have the logic in another 
 ##### Mac machine:
 * If you do not have Python 3.7.3 in your machine, open a command line
 * Enter the following commands:
-```shell
+	```shell
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	```
 	```shell
@@ -108,13 +108,13 @@ Beside, I decided to create two different testNG files, this because both pages 
 
 The project structure is the following:
 
-- java/bot (Encapsulates the selenium api functions, here we have the sendKeys, click, the explicit waits, etc. We have custom functions to improve the functionality that selenium offers)
-- java/datastructures (Domain classes that map the json information in a object, this object is from where we get the information for each test scenario)
-- java/pageobjects (Page objects are handled in that package)
-- java/steps (These classes are controllers between the tests and Page objects, they comunicate both, here we have the logic of each test, when we need a specific function of a page object, it comunicates with the class and call the function. I created this classes in order to have only impulses from the test class, the steps files contains the logic and when we need to interact with a page, we just call the function for the Page object)
-- java/utilities (Classes that are useful for the framework, for example read a json file)
-- resources (Here we have the json files with the information we use for testing. Besides, the data providers are located here)
-- tests/config (This is an important folder, here we have all the classes we need to start a driver with its configurations, here we have the classes to create the reports when the execution ends)
+- **java/bot** (Encapsulates the selenium api functions, here we have the sendKeys, click, the explicit waits, etc. We have custom functions to improve the functionality that selenium offers)
+- **java/datastructures** (Domain classes that map the json information in a object, this object is from where we get the information for each test scenario)
+- **java/pageobjects** (Page objects are handled in that package)
+- **java/steps** (These classes are controllers between the tests and Page objects, they comunicate both, here we have the logic of each test, when we need a specific function of a page object, it comunicates with the class and call the function. I created this classes in order to have only impulses from the test class, the steps files contains the logic and when we need to interact with a page, we just call the function for the Page object)
+- **java/utilities** (Classes that are useful for the framework, for example read a json file)
+- **resources** (Here we have the json files with the information we use for testing. Besides, the data providers are located here)
+- **tests/config** (This is an important folder, here we have all the classes we need to start a driver with its configurations, here we have the classes to create the reports when the execution ends)
 
 Related to the scenario to test for the wikipedia page, I felt that we need to increase the coverage,so, I extended the search test, I added a steps to compare each title in the table of contents has a section with the same name in the article. Here I use a Java 8 feature (lambda) in order to show I have worked with this nice feature.
 

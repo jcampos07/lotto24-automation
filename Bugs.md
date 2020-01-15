@@ -75,7 +75,8 @@ When a post is updated using the put option, it retrieves an id that belongs to 
 Critical
 
 
-**Steps:**
+| Steps: |
+| --- |
 | 1- Go to postman, enter the following url -> http://jsonplaceholder.typicode.com/posts/1 |
 | 2- In "Headers" section enter -> "Accept -> application/json" |
 | 3- In the "Body" enter the following json: |

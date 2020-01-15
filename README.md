@@ -117,7 +117,7 @@ The project structure is the following:
 - **resources** (Here we have the json files with the information we use for testing. Besides, the data providers are located here)
 - **tests/config** (This is an important folder, here we have all the classes we need to start a driver with its configurations, here we have the classes to create the reports when the execution ends)
 
-Related to the scenario to test for the wikipedia page, I felt that we need to increase the coverage,so, I extended the search test, I added a steps to compare each title in the table of contents has a section with the same name in the article. Here I use a Java 8 feature (lambda) in order to show I have worked with this nice feature.
+Related to the scenario to test for the wikipedia page, I felt that we need to increase the coverage, so, I extended the search test, I added steps to make sure all the titles in the table of contents has a section with the same name in the article. Here I use a Java 8 feature (lambda) in order to show I have worked with this nice feature.
 
 ## Run Selenium Project:
 
@@ -138,8 +138,8 @@ mvn test -DsuiteXmlFile=wikipedia.xml -Dbrowser=Chrome -Dmode=UI -Dtag=search
 ```
 Here we can noticed, I have configure the browser to be passed as parameter, so, the ones we can send are the following:
 	
-	Firefox -> Firefox browser
-	Chome -> Chrome browser
+	Firefox
+	Chome
 	
 Additionally, we can run the tests in headless mode, for this me would need to modify the mode parameter like this:
 	

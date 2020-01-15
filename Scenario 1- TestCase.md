@@ -18,7 +18,7 @@ High
 **Preconditions:**
 
 **Description:**
-When users search information in wikipedia page and they have a typo in the system, the page should show a "did you mean" option with some matches, after they click on the link, the list of articles should be displayed, when they opened a article the table of contents should be displayed.
+Verify the search on wikipedia works as expected, it should suggest to customer when they type a wrong search, when they open a article, a table of content should be displayed, each title in this table should have a section in the article
 
 | Steps: | Expected result |
 | --- | --- |

@@ -146,7 +146,7 @@ Additionally, we can run the tests in headless mode, for this me would need to m
 ```shell
 mvn test -DsuiteXmlFile=wikipedia.xml -Dbrowser=Chrome -Dmode=headless -Dtag=search
 ```
-The above commands are going to execute the wikipedia test only, if you want to test the tesla page, you need to execute the following command:
+The above commands are going to execute the wikipedia test, if you want to test the tesla page, you need to execute the following command:
 	
 ```shell
 mvn test -DsuiteXmlFile=tesla.xml -Dbrowser=Chrome -Dmode=UI -Dtag=tesla

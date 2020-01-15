@@ -1,10 +1,10 @@
 # Scenario 2
 
-**Test Case** id: 
+**Test Case id**: 
 02
 
 **Title:**
-Verify Carousel works on responsive 
+Verify Carousel works on responsive mode
  
 **Module:** 
 Home Page
@@ -18,7 +18,7 @@ Medium
 **Preconditions:**
 
 **Description:**
-Tesla page should be responsive, the carousel should work when the page is resize to 500px in order to make sure it works as it work in a normal browser.
+Tesla page should be responsive, the carousel should work when the page is resized to 550px.
 
 | Steps: | Expected result |
 | --- | --- |
